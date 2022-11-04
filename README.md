@@ -112,10 +112,11 @@ Request Binding 은 Http Post를 선택 하고 Response Signature Algorithm 은 
 
 완료 버튼을 클릭하면 Atlas가 제공하는 SAML 의 Meta 정보를 받을 수 있는 페이지가 오픈 됩니다.
 필요한 정보는 Assertion Consumer Service URL과 Audience URI 로 이를 복사하여 줍니다.
-<img src="/images/image50.png" width="50%" height="50%">    
+<img src="/images/image50.png" width="80%" height="80%">    
 
 관련 도메인과 조직에 대한 정보를 입력 하여 줍니다.
-<img src="/images/image46.png" width="90%" height="90%">    
+<img src="/images/image46.png" width="75%" height="75%">    
+버튼을 클릭 하면 기존에 입력 해준 도메인 및 Organization을 볼 수 있습니다. 알맞은 내용을 선택 하여 줍니다.    
 
 
 #### Service Provider 정보 등록
@@ -135,10 +136,12 @@ Default Relay State 를 http://cloud.mongodb.com로 입력 하여 주며 Advance
 Okta 에 사용자를 추가 하여 테스트 합니다.
 <img src="/images/image90.png" width="90%" height="90%">    
 
-Okta 에 Directory/People 에서 Add Person 으로 사용자를 추가 합니다. (사용자 ID가 반드시 이메일 형식으로 @nosql.site 여야 합니다.)
+Okta 에 Directory/People 에서 Add Person 으로 사용자를 추가 합니다. (사용자 ID가 반드시 이메일 형식으로 @nosql.site 여야 합니다.)    
+
+
 <img src="/images/image91.png" width="90%" height="90%">    
 
-생성된 사용자를 조회 한 후 Application (MOngoDB Atlas-SSO)를 추가해 줍니다.
+생성된 사용자를 조회 한 후 Application (MOngoDB Atlas-SSO)를 추가해 줍니다.   
 <img src="/images/image93.png" width="90%" height="90%">    
 
 
@@ -156,7 +159,7 @@ Single Sign On 설정에 따라 Okta 로그인 페이지로 이동 합니다. �
 
 추가 인증 (MFA)와 패스워드 인증이 완료 되면 Single Sign On 을 통해 추가 인증 없이 Atlas Console 로 이동 됩니다.
 
-<img src="/images/image97.png" width="90%" height="90%">   
+<img src="/images/image101.png" width="90%" height="90%">   
 
 #### IDP Initiate Single Sign On
 

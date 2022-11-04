@@ -112,9 +112,10 @@ Request Binding 은 Http Post를 선택 하고 Response Signature Algorithm 은 
 
 완료 버튼을 클릭하면 Atlas가 제공하는 SAML 의 Meta 정보를 받을 수 있는 페이지가 오픈 됩니다.
 필요한 정보는 Assertion Consumer Service URL과 Audience URI 로 이를 복사하여 줍니다.
+<img src="/images/image50.png" width="50%" height="50%">    
 
 관련 도메인과 조직에 대한 정보를 입력 하여 줍니다.
-<img src="/images/image45.png" width="90%" height="90%">    
+<img src="/images/image46.png" width="90%" height="90%">    
 
 
 #### Service Provider 정보 등록

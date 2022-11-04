@@ -19,20 +19,21 @@ SSO 로 접근하기 위한 Application 등록을 위해 Admin 버튼을 클릭 
 <img src="/images/image03.png" width="90%" height="90%">    
 
 MongoDB 로 검색 하면 MongoDB Atlas 를 찾을 수 있습니다. 검색 후 이를 클릭 합니다.
-<img src="/images/image04.png" width="90%" height="90%">   
-Add Integration 을 클릭 하여 추가 하여 줍니다.
-<img src="/images/image05.png" width="90%" height="90%">   
+<img src="/images/image04.png" width="90%" height="90%">    
+
+Add Integration 을 클릭 하여 추가 하여 줍니다.    
+<img src="/images/image05.png" width="90%" height="90%">    
 
 Single Sign On 애플리케이션을 등록 하여야 합니다. 이름 및 Icon 표시를 선택 할 수 있습니다.
 Application Label은 사용자가 OKTA에 로그인 후에 보게 되는 접근 가능한 애플리케이션 목록에 표시되는 이름 입니다.
-테스트에서는 확인을 위해 이름을 MongoDB Atlas-SSO로 변경 하며 Visibility를 uncheck 하여 아이콘이 보여지도록 설정 합니다.
+테스트에서는 확인을 위해 이름을 MongoDB Atlas-SSO로 변경 하며 Visibility를 uncheck 하여 아이콘이 보여지도록 설정 합니다.    
 <img src="/images/image06.png" width="90%" height="90%">   
 
-Sign-On Option 에서 SAML2.0 을 선택 하여 주고 완료 하여 줍니다.
-<img src="/images/image30.png" width="90%" height="90%">   
+Sign-On Option 에서 SAML2.0 을 선택 하여 주고 완료 하여 줍니다.    
+<img src="/images/image30.png" width="90%" height="80%">    
 
-저장 후에 Application 에 Active 상태로 등록 한 MongoDB Atlas-SSO가 등록 된 것을 확인 합니다.
-<img src="/images/image31.png" width="90%" height="90%">   
+저장 후에 Application 에 Active 상태로 등록 한 MongoDB Atlas-SSO가 등록 된 것을 확인 합니다.    
+<img src="/images/image31.png" width="90%" height="80%">   
 
 생성한 SAML의 인증서를 받기 위해 이를 클릭 합니다.
 

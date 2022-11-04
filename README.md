@@ -34,11 +34,15 @@ Sign-On Option 에서 SAML2.0 을 선택 하여 주고 완료 하여 줍니다.
 
 생성한 SAML의 인증서를 받기 위해 이를 클릭 합니다.
 
-Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다. 
+Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서(SHA-2)를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다. 
 <img src="/images/image32.png" width="90%" height="90%">   
-인증서는 okta.cert 로 다운 받아 지며 이를 okta.cer 로 확장자를 변경 하여 줍니다.
+인증서는 okta.cert 로 받아집니다.
 
-인증서의 Meta 정보를 클릭 합니다.
+Okta의 추가 정보를 얻기 위해 인증서의 Meta 정보를 클릭 합니다.
+<img src="/images/image33.png" width="90%" height="90%">   
+
+Meta 정보 페이지에서 entityID 와 SingleSignOneServie 의 Location 주소를 메모 하여 줍니다.
+<img src="/images/image34.png" width="90%" height="90%">   
 
 ### MongoDB Atlas 설정
 Atlas 계정은 이메일 형태로 구성되며 로그인시 이메일의 도메인을 이용하여 로그인 방법이 지정 됩니다. 따라서 이메일의 도메인에 대해 관리 권한을 가지고 있어야 합니다. 도메인은 nosql.site를 이용할 것이며 사용자 계정은 ***@nosql.site 가 됩니다.
@@ -89,7 +93,32 @@ Identity Providers 탭을 클릭 후 Setup Identity Provider 를 클릭 합니�
 <img src="/images/image40.png" width="90%" height="90%">    
 
 IDP 이름을 입력하고 Issue URI 을 입력 하여 줍니다.
+(이전 작업에서 기록한 EntityID를 입력 합니다.)
+Single Sign-On URL은 Okta 의 Meta 데이터의 SingleSignOneServie 의 Location 주소를 입력 하여 줍니다.
+<img src="/images/image41.png" width="90%" height="90%">    
 
+인증서를 업로드는 Alternatively, paste the contents of the certifiacte directly 를 클릭 하여 줍니다.
+다운받은 인증서 okta.cert을 오픈하여 전체 내용을 붙여 넣어 줍니다.
+<img src="/images/image42.png" width="90%" height="90%">    
+
+Request Binding 은 Http Post를 선택 하고 Response Signature Algorithm 은 SHA-256을 선택 하여 줍니다.
+<img src="/images/image43.png" width="90%" height="90%">    
+
+완료 버튼을 클릭하면 Atlas가 제공하는 SAML 의 Meta 정보를 받을 수 있는 페이지가 오픈 됩니다.
+필요한 정보는 Assertion Consumer Service URL과 Audience URI 로 이를 복사하여 줍니다.
+
+
+#### Service Provider 정보 등록
+최종 정보를 업데이트 하기 위해 OKTA 의 관리자 페이지로 이동 합니다.
+<img src="/images/image50.png" width="90%" height="90%">  
+MongoDB Atlas-SSO를 클릭 후 상단 메뉴 중 Sign On 탭을 선택 합니다.
+<img src="/images/image51.png" width="90%" height="90%">  
+
+Default Relay State 를 http://cloud.mongodb.com로 입력 하여 주며 Advanced Sign-on settings 에 Atlas 페이지의 Assertion Consumer Service URL 과 Audience URI를 각각 입력 하여 줍니다.
+또한 아이디가 Email 형태로 전달 됨으로 username format 을 Email 로 선택 하여 줍니다.
+<img src="/images/image52.png" width="90%" height="90%">  
+
+데이터를 저장 하여 후에 상태가 Active 상태 인지 확인 합니다. (Deactive 상태인 경우 Active 로 변경)
 
 ### Single Sign On Test
 Okta 에 사용자를 추가 하여 테스트 합니다.
@@ -110,3 +139,18 @@ MongoDB Atlas 에 로그인을 위해 접속 합니다. 사용자는 입력한 �
 
 Single Sign On 설정에 따라 Okta 로그인 페이지로 이동 합니다. 로그인을 위해 사용자 ID를 입력 합니다.
 <img src="/images/image96.png" width="90%" height="90%">   
+
+추가 인증 (MFA)와 패스워드 인증이 완료 되면 Single Sign On 을 통해 추가 인증 없이 Atlas Console 로 이동 됩니다.
+
+<img src="/images/image97.png" width="90%" height="90%">   
+
+추가 인증 테스트를 위해 Atlas를 로그  아웃 하고 New Private window 혹은 New Incognito window 로 브라우저를 오픈 합니다.
+오픈된 브라우저에서 okta 로 직접 로그인 합니다.
+
+<img src="/images/image98.png" width="90%" height="90%">   
+
+인증이 완료 되면 접근 가능한 애플리케이션 페이지가 오픈됩니다. 테스트를 위해 MongoDB Atlas-SSO를 클릭 합니다.
+<img src="/images/image99.png" width="90%" height="90%">   
+
+로그인 된 상태로 Atlas에 접근 하는 것을 확인 할 수 있습니다.
+<img src="/images/image100.png" width="90%" height="90%">   

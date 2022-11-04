@@ -166,10 +166,10 @@ Single Sign On 설정에 따라 Okta 로그인 페이지로 이동 합니다. �
 인증 테스트를 위해 Atlas를 로그 아웃 하고 New Private window 혹은 New Incognito window 로 브라우저를 오픈 합니다.
 오픈된 브라우저에서 okta 로 직접 로그인 합니다.
 
-<img src="/images/image98.png" width="90%" height="90%">   
-
-인증이 완료 되면 접근 가능한 애플리케이션 페이지가 오픈됩니다. 테스트를 위해 MongoDB Atlas-SSO를 클릭 합니다.
 <img src="/images/image99.png" width="90%" height="90%">   
 
-로그인 된 상태로 Atlas에 접근 하는 것을 확인 할 수 있습니다.
+인증이 완료 되면 접근 가능한 애플리케이션 페이지가 오픈됩니다. 테스트를 위해 MongoDB Atlas-SSO를 클릭 합니다.
 <img src="/images/image100.png" width="90%" height="90%">   
+
+로그인 된 상태로 Atlas에 접근 하는 것을 확인 할 수 있습니다.
+<img src="/images/image102.png" width="90%" height="90%">   

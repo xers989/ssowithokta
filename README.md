@@ -30,39 +30,40 @@ Application Label은 사용자가 OKTA에 로그인 후에 보게 되는 접근 
 <img src="/images/image06.png" width="90%" height="90%">   
 
 Sign-On Option 에서 SAML2.0 을 선택 하여 주고 완료 하여 줍니다.    
-<img src="/images/image30.png" width="90%" height="80%">    
+<img src="/images/image30.png" width="80%" height="80%">    
 
 저장 후에 Application 에 Active 상태로 등록 한 MongoDB Atlas-SSO가 등록 된 것을 확인 합니다.    
-<img src="/images/image31.png" width="90%" height="80%">   
+<img src="/images/image31.png" width="80%" height="80%">   
 
-생성한 SAML의 인증서를 받기 위해 이를 클릭 합니다.
+생성한 SAML의 인증서를 받기 위해 이를 클릭 합니다.    
 
-Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서(SHA-2)를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다. 
-<img src="/images/image32.png" width="90%" height="90%">   
+Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서(SHA-2)를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다.   
+<img src="/images/image32.png" width="90%" height="90%">    
+
 인증서는 okta.cert 로 받아집니다.
 
-Okta의 추가 정보를 얻기 위해 인증서의 Meta 정보를 클릭 합니다.
-<img src="/images/image33.png" width="90%" height="90%">   
+Okta의 추가 정보를 얻기 위해 인증서의 Meta 정보를 클릭 합니다.    
+<img src="/images/image33.png" width="80%" height="80%">    
 
-Meta 정보 페이지에서 entityID 와 SingleSignOneServie 의 Location 주소를 메모 하여 줍니다.
+Meta 정보 페이지에서 entityID 와 SingleSignOneServie 의 Location 주소를 메모 하여 줍니다.    
 <img src="/images/image34.png" width="90%" height="90%">   
 
 ### MongoDB Atlas 설정
 Atlas 계정은 이메일 형태로 구성되며 로그인시 이메일의 도메인을 이용하여 로그인 방법이 지정 됩니다. 따라서 이메일의 도메인에 대해 관리 권한을 가지고 있어야 합니다. 도메인은 nosql.site를 이용할 것이며 사용자 계정은 ***@nosql.site 가 됩니다.
 
-Atlas 에 관리자 권한으로 로그인 합니다.
-로그인 후 관리자 페이지로 이동 합니다. (상단의 톱니 아이콘 클릭)
+Atlas 에 관리자 권한으로 로그인 합니다.    
+로그인 후 관리자 페이지로 이동 합니다. (상단의 톱니 아이콘 클릭)    
 <img src="/images/image07.png" width="90%" height="90%">      
 
 관리자 페이지에서 Settings 에 Setup Federation Settings 의 Visit Federation Management App 를 클릭 합니다.
 <img src="/images/image08.png" width="90%" height="90%">      
 
 #### Domain 설정
-Domain 탭에서 Add Domains 를 클릭 합니다.
-<img src="/images/image20.png" width="90%" height="90%">    
+Domain 탭에서 Add Domains 를 클릭 합니다.   
+<img src="/images/image20.png" width="85%" height="85%">    
 
 이름과 도메인 명을 입력 하여 줍니다.
-<img src="/images/image21.png" width="90%" height="90%">    
+<img src="/images/image21.png" width="85%" height="85%">    
 
 도메인 소유 방법을 증명 하기 위한 방법을 선택 합니다. 별도 웹서버 없이 도메인관리 툴에서 지정된 텍스트를 도메인에 등록 하는 방법을 선택 합니다. (도메인 웹서버가 있는 경우 지정된 html 을 올려서 할 수도 있습니다)
 <img src="/images/image22.png" width="90%" height="90%">    
@@ -73,14 +74,16 @@ Domain 탭에서 Add Domains 를 클릭 합니다.
 
 GoDaddy 에서 구매한 도메인으로 해당 사이트에서 DNS 레코드를 등록 할 수 있습니다.  
 godaddy.com 에 로그인 후 소유 도메인(nosql.site)에서 DNS 관리를 선택 합니다.
-<img src="/images/image24.png" width="90%" height="90%">    
+<img src="/images/image24.png" width="80%" height="80%">    
 
-추가 버튼을 클릭 후 record type 을 txt 로 선택 합니다.
-값 필드에 Atlas 에서 생성된 임의 스트링 값을 입력 하여 줍니다.
-<img src="/images/image25.png" width="90%" height="90%">    
+추가 버튼을 클릭 후 record type 을 txt 로 선택 합니다.    
+값 필드에 Atlas 에서 생성된 임의 스트링 값을 입력 하여 줍니다.    
+<img src="/images/image25.png" width="80%" height="80%">    
+
+
 TTL 은 최소 시간인 30분을 선택 하고 저장 합니다. 도메인이 적용 되는 시간은 최대 1시간 까지 걸립니다.
-Atlas 페이지에서 Finish 버튼을 클릭 합니다.
-<img src="/images/image26.png" width="90%" height="90%">    
+Atlas 페이지에서 Finish 버튼을 클릭 합니다.    
+<img src="/images/image26.png" width="90%" height="90%">      
 
 등록된 도메인이 확인 되지 않은 상태로 있으며 몇 분 후 verfiy 버튼을 클릭 합니다.
 <img src="/images/image27.png" width="90%" height="90%">    
@@ -113,13 +116,13 @@ Request Binding 은 Http Post를 선택 하고 Response Signature Algorithm 은 
 
 #### Service Provider 정보 등록
 최종 정보를 업데이트 하기 위해 OKTA 의 관리자 페이지로 이동 합니다.
-<img src="/images/image50.png" width="90%" height="90%">  
-MongoDB Atlas-SSO를 클릭 후 상단 메뉴 중 Sign On 탭을 선택 합니다.
 <img src="/images/image51.png" width="90%" height="90%">  
+MongoDB Atlas-SSO를 클릭 후 상단 메뉴 중 Sign On 탭을 선택 합니다.
+<img src="/images/image52.png" width="90%" height="90%">  
 
 Default Relay State 를 http://cloud.mongodb.com로 입력 하여 주며 Advanced Sign-on settings 에 Atlas 페이지의 Assertion Consumer Service URL 과 Audience URI를 각각 입력 하여 줍니다.
 또한 아이디가 Email 형태로 전달 됨으로 username format 을 Email 로 선택 하여 줍니다.
-<img src="/images/image52.png" width="90%" height="90%">  
+<img src="/images/image53.png" width="90%" height="90%">  
 
 데이터를 저장 하여 후에 상태가 Active 상태 인지 확인 합니다. (Deactive 상태인 경우 Active 로 변경)
 

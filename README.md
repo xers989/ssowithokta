@@ -125,6 +125,7 @@ Default Relay State 를 http://cloud.mongodb.com로 입력 하여 주며 Advance
 <img src="/images/image53.png" width="90%" height="90%">  
 
 데이터를 저장 하여 후에 상태가 Active 상태 인지 확인 합니다. (Deactive 상태인 경우 Active 로 변경)
+<img src="/images/image54.png" width="90%" height="90%">  
 
 ### Single Sign On Test
 Okta 에 사용자를 추가 하여 테스트 합니다.

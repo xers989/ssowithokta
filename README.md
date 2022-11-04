@@ -9,13 +9,15 @@ OKTA의 계정을 생성 하고 로그인 합니다.
 https://www.okta.com/
 Workforce Identity의 30일 무료 계정 생성 합니다.
 계정이 생성 되면 전용 도메인이 생성 됩니다
-<img src="/images/image01.png" width="90%" height="90%">   
+<img src="/images/image01.png" width="90%" height="90%">    
 제공되는 URL을 클릭 하여 OKTA에 로그인을 합니다. (계정이 생성 되면 임시 패스워드로 로그인이 가능 하며 활성화 과정에서 초기 패스워드 설정 및 추가 인증 수단 - MFA를 등록하여야 합니다.)
-로그인이 된 화면은 다음과 같습니다.
-<img src="/images/image02.png" width="90%" height="90%">   
+로그인이 된 화면은 다음과 같습니다.    
+<img src="/images/image02.png" width="90%" height="90%">    
+
 SSO 로 접근하기 위한 Application 등록을 위해 Admin 버튼을 클릭 합니다. (관리자 권한이 있어야 하며 다시 한번 인증을 하게 됩니다.)
 로그인 후 Use Single Sign On 의 Add App 버튼을 클릭 합니다.
-<img src="/images/image03.png" width="90%" height="90%">   
+<img src="/images/image03.png" width="90%" height="90%">    
+
 MongoDB 로 검색 하면 MongoDB Atlas 를 찾을 수 있습니다. 검색 후 이를 클릭 합니다.
 <img src="/images/image04.png" width="90%" height="90%">   
 Add Integration 을 클릭 하여 추가 하여 줍니다.

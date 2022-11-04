@@ -130,6 +130,9 @@ Okta 에 Directory/People 에서 Add Person 으로 사용자를 추가 합니다
 생성된 사용자를 조회 한 후 Application (MOngoDB Atlas-SSO)를 추가해 줍니다.
 <img src="/images/image93.png" width="90%" height="90%">    
 
+
+#### SP Initiate Single Sign On
+
 MongoDB Atlas-SSO를 검색 후 Assign 하여 줍니다.
 <img src="/images/image94.png" width="90%" height="90%">    
 
@@ -144,7 +147,9 @@ Single Sign On 설정에 따라 Okta 로그인 페이지로 이동 합니다. �
 
 <img src="/images/image97.png" width="90%" height="90%">   
 
-추가 인증 테스트를 위해 Atlas를 로그  아웃 하고 New Private window 혹은 New Incognito window 로 브라우저를 오픈 합니다.
+#### IDP Initiate Single Sign On
+
+인증 테스트를 위해 Atlas를 로그 아웃 하고 New Private window 혹은 New Incognito window 로 브라우저를 오픈 합니다.
 오픈된 브라우저에서 okta 로 직접 로그인 합니다.
 
 <img src="/images/image98.png" width="90%" height="90%">   

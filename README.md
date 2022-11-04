@@ -30,12 +30,12 @@ Sign-On Option 에서 SAML2.0 을 선택 하여 주고 완료 하여 줍니다.
 <img src="/images/image30.png" width="90%" height="90%">   
 
 저장 후에 Application 에 Active 상태로 등록 한 MongoDB Atlas-SSO가 등록 된 것을 확인 합니다.
-<img src="/images/image30.png" width="90%" height="90%">   
+<img src="/images/image31.png" width="90%" height="90%">   
 
 생성한 SAML의 인증서를 받기 위해 이를 클릭 합니다.
-<img src="/images/image31.png" width="90%" height="90%">   
-Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다. 
 <img src="/images/image32.png" width="90%" height="90%">   
+Sign On 탭에 하단에 SAML Signing Certificates 를 볼 수 있습니다. 이중 Active 상태의 인증서를 선택 하여 Action을 클릭 하여 인증서를 다운 받습니다. 
+<img src="/images/image33.png" width="90%" height="90%">   
 인증서는 okta.cert 로 다운 받아 지며 이를 okta.cer 로 확장자를 변경 하여 줍니다.
 
 인증서의 Meta 정보를 클릭 합니다.

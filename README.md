@@ -101,17 +101,20 @@ Identity Providers 탭을 클릭 후 Setup Identity Provider 를 클릭 합니�
 IDP 이름을 입력하고 Issue URI 을 입력 하여 줍니다.
 (이전 작업에서 기록한 EntityID를 입력 합니다.)
 Single Sign-On URL은 Okta 의 Meta 데이터의 SingleSignOneServie 의 Location 주소를 입력 하여 줍니다.
-<img src="/images/image41.png" width="90%" height="90%">    
+<img src="/images/image42.png" width="90%" height="90%">    
 
 인증서를 업로드는 Alternatively, paste the contents of the certifiacte directly 를 클릭 하여 줍니다.
 다운받은 인증서 okta.cert을 오픈하여 전체 내용을 붙여 넣어 줍니다.
-<img src="/images/image42.png" width="90%" height="90%">    
+<img src="/images/image43.png" width="90%" height="90%">    
 
 Request Binding 은 Http Post를 선택 하고 Response Signature Algorithm 은 SHA-256을 선택 하여 줍니다.
-<img src="/images/image43.png" width="90%" height="90%">    
+<img src="/images/image44.png" width="90%" height="90%">    
 
 완료 버튼을 클릭하면 Atlas가 제공하는 SAML 의 Meta 정보를 받을 수 있는 페이지가 오픈 됩니다.
 필요한 정보는 Assertion Consumer Service URL과 Audience URI 로 이를 복사하여 줍니다.
+
+관련 도메인과 조직에 대한 정보를 입력 하여 줍니다.
+<img src="/images/image45.png" width="90%" height="90%">    
 
 
 #### Service Provider 정보 등록
@@ -122,10 +125,10 @@ MongoDB Atlas-SSO를 클릭 후 상단 메뉴 중 Sign On 탭을 선택 합니�
 
 Default Relay State 를 http://cloud.mongodb.com로 입력 하여 주며 Advanced Sign-on settings 에 Atlas 페이지의 Assertion Consumer Service URL 과 Audience URI를 각각 입력 하여 줍니다.
 또한 아이디가 Email 형태로 전달 됨으로 username format 을 Email 로 선택 하여 줍니다.
-<img src="/images/image53.png" width="90%" height="90%">  
+<img src="/images/image53.png" width="80%" height="80%">  
 
 데이터를 저장 하여 후에 상태가 Active 상태 인지 확인 합니다. (Deactive 상태인 경우 Active 로 변경)
-<img src="/images/image54.png" width="90%" height="90%">  
+<img src="/images/image54.png" width="70%" height="70%">  
 
 ### Single Sign On Test
 Okta 에 사용자를 추가 하여 테스트 합니다.
